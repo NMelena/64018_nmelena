@@ -1,0 +1,41 @@
+---
+title: "nmelena_2_ext"
+author: "Nathan Melena"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r}
+library(lpSolveAPI)
+```
+
+
+```{r}
+Assignment_2 <- read.lp("Assignment_2.lp") # create an lp object Assignment_2
+Assignment_2                           # Assignment_2   
+```
+
+
+
+```{r}
+solve(Assignment_2)
+get.objective(Assignment_2)        # get objective value
+get.variables(Assignment_2)        # get values of decision variables
+get.constraints(Assignment_2)      # get constraint RHS values
+```
+
+The Maximum profit is 695999.9
+
+The optimal variable values are as fallows:
+L1=516.8698 L2=0 L3=0 M1=177.5069 M2=666.6667 M3=0 S1=0 S2=166.6667 S3=416.6667
+
+
+
+
+
+
+
+
+
+
+
